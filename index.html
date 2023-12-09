@@ -121,7 +121,7 @@
 
     footer a:hover {
       text-decoration: underline;
-      color: #ff9900;
+      color: #abb6c8;
     }
   </style>
 </head>
@@ -185,8 +185,14 @@
   </main>
   
   <footer>
-    <p>Contact: <a href="mailto:j37hu@uwaterloo.ca.com">j37hu@uwaterloo.ca</a></p>
+    <p>Contact: <a href="#" onclick="openEmail()">j37hu@uwaterloo.ca</a></p>
   </footer>
+  
+  <script>
+    function openEmail() {
+    window.open('mailto:j37hu@uwaterloo.ca');
+    }
+  </script>
 
   <script>
     function scrollToSection(sectionId) {
