@@ -92,10 +92,9 @@
     }
 
     .section-bg {
-      background-image: url("https://via.placeholder.com/1500x800");
-      background-size: cover;
+      background-image: url("https://wallpapers.com/images/hd/neutral-colors-background-x13z3l3kkkwgo8i0.jpg");
+      background-size: 100% 100%;
       background-position: center;
-      background-repeat: no-repeat;
       padding: 100px 20px;
       color: #fff;
     }
@@ -123,6 +122,50 @@
       font-family: Bradley Hand, cursive;
       font-size: 2rem;
     }
+    
+    .about-image {
+      height: 460px;
+      width: auto;
+      border-radius: 10%;
+      float: left;
+      margin-top: 30px;
+    }
+    
+    .about-content {
+      overflow: hidden;
+    }
+    
+    .about-text {
+      color: black;
+      margin-left: 400px;
+      background-color: white;
+      opacity: 0.6;
+      padding: 25px;
+    }
+    
+    .hobbies-text {
+      color: #e6dcdd;
+    }
+    
+    .hobbies-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      gap: 20px; 
+    }
+    
+    .hobbies-images img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    
+    .top-row,
+    .bottom-row {
+      display: grid;
+      grid-template-columns: 1fr; 
+      gap: 25px; 
+    }
+
 
   </style>
 </head>
@@ -149,22 +192,35 @@
   <!-- Main Content -->
   <main>
      <!-- About Me Section -->
-    <section class="section section-bg" id="about">
-      <div class="section-content">
-        <h2>About Me</h2>
-        <p>Your introduction goes here...</p>
-        <div class="image-placeholder" style="height: 300px;"></div>
-      </div>
+    <section class="section section-bg clearfix" id="about"> 
+      <div class="section-content"><h2>About Me</h2>
+        <div class="about-content">
+          <img src="IMG_0807.PNG" alt="about me image" class="about-image">
+          <p class="about-text">Hello! I'm Jasmine Hu, a 19-year-old student majoring in Global Business and Digital Arts at the University of Waterloo.</p>
+          <p class="about-text">My MBTI is ESTP (Entrepreneur Personality), meaning that I love finding exciting new things to explore and experience! </p>
+        </div></div>
     </section>
+
 
     <!-- Hobbies Section -->
     <section class="section" id="hobbies">
-      <div class="section-content">
-        <h2>Hobbies</h2>
-        <p>Your project descriptions...</p>
-        <div class="image-placeholder" style="height: 300px;"></div>
+  <div class="section-content">
+    <h2 class="hobbies-text">Hobbies</h2>
+    <div class="hobbies-images">
+      <div class="top-row">
+        <img src="IMG_0928.jpg" alt="Hobby 1">
+        <img src="IMG_0925.jpg" alt="Hobby 2">
       </div>
-    </section>
+      <div class="bottom-row">
+        <img src="IMG_0921.jpg" alt="Hobby 3">
+        <img src="IMG_0927.jpg" alt="Hobby 4">
+      </div>
+    </div>
+    <p>Your descriptions here...</p>
+  </div>
+</section>
+
+
 
     <!-- Projects Section -->
     <section class="section section-bg" id="projects">
