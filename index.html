@@ -201,14 +201,6 @@
     <h1>JASMINE HU'S WEBSITE</h1>
     <nav>
       <ul>
-        <!-- Scroll to Section Function -->
-        <script>
-          function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            section.scrollIntoView({ behavior: "smooth" });
-          }
-        </script>
-        
         <li><a href="#about" onclick="scrollToSection('about')">About Me</a></li>
         <li><a href="#hobbies" onclick="scrollToSection('hobbies')">Hobbies</a></li>
         <li><a href="#projects" onclick="scrollToSection('projects')">Projects</a></li>
@@ -347,14 +339,6 @@
         <tr>
           <td>Email:</td>
           <td><a href="mailto:j37hu@uwaterloo.ca">j37hu@uwaterloo.ca</a></td>
-          
-          <!-- mailto function -->
-          <script>
-            function openEmail() {
-              window.open('mailto:j37hu@uwaterloo.ca');
-            }
-          </script>
-          
         </tr>
         <tr>
           <td>Phone:</td>
@@ -374,6 +358,21 @@
         </tr>
       </table>
     </footer>
+    
+    <!-- mailto function -->
+    <script>
+      function openEmail() {
+        window.open('mailto:j37hu@uwaterloo.ca');
+      }
+    </script>
+    
+    <!-- Scroll to Section Function -->
+    <script>
+      function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
 
 </body>
 </html>
