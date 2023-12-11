@@ -111,7 +111,7 @@
       margin: 0 auto;
     }
 
-    .container {
+    .main-page {
       text-align: center;
       color: white;
     }
@@ -201,6 +201,14 @@
     <h1>JASMINE HU'S WEBSITE</h1>
     <nav>
       <ul>
+        <!-- Scroll to Section Function -->
+        <script>
+          function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: "smooth" });
+          }
+        </script>
+        
         <li><a href="#about" onclick="scrollToSection('about')">About Me</a></li>
         <li><a href="#hobbies" onclick="scrollToSection('hobbies')">Hobbies</a></li>
         <li><a href="#projects" onclick="scrollToSection('projects')">Projects</a></li>
@@ -209,7 +217,7 @@
     </nav>
     
     <!-- Main Website Page -->
-    <div class="container">
+    <div class="main-page">
       <img src="IMG_0915.JPG" alt="main page image" style="width: 100%; max-width: 1000px; height: auto; margin: auto; margin-bottom: 50px; display: block;">
       <div class="centered">Hi there~ Welcome to my website!</div>
     </div>
@@ -234,14 +242,14 @@
         <div class="hobbies-images">
           <div class="mosaic-grid">
             <div class="item item1">
-              <img src="IMG_0929.jpg" alt="Hobby 1">
+              <img src="IMG_0929.jpg" alt="Hobby 1: Dance">
               <div class="text-box">
                 <h3>Dance</h3>
                 <p>From a young age, dance has been an integral part of my life. It's more than movement; it's a gateway to friendships. I'm actively engaged in the UW dance community, where every step fosters new connections and experiences.</p>
               </div>
             </div>
             <div class="item item2">
-              <img src="IMG_0925.jpg" alt="Hobby 2">
+              <img src="IMG_0925.jpg" alt="Hobby 2: Music">
               <div class="text-box">
                 <!-- Add text related to Hobby 2 -->
                 <h3>Music</h3>
@@ -249,7 +257,7 @@
               </div>
             </div>
             <div class="item item3">
-              <img src="IMG_0927.jpg" alt="Hobby 3">
+              <img src="IMG_0927.jpg" alt="Hobby 3: DIY">
               <div class="text-box">
                 <!-- Add text related to Hobby 3 -->
                 <h3>DIY</h3>
@@ -257,7 +265,7 @@
               </div>
             </div>
             <div class="item item4">
-              <img src="IMG_0921.jpg" alt="Hobby 4">
+              <img src="IMG_0921.jpg" alt="Hobby 4: Chinese Culture">
               <div class="text-box">
                 <!-- Add text related to Hobby 4 -->
                 <h3>Chinese Culture</h3>
@@ -274,19 +282,19 @@
     <section class="section section-bg" id="projects">
       <div class="section-content">
         <h2>Recent Projects</h2>
-        <p><b>Documentary: </b>Tuning Dreams</p>
+        <h3>Documentary: Tuning Dreams</h3>
         <a href="https://youtu.be/GjJ1u0Cf0ic" target="_blank"><img src="Screen Shot 2023-12-10 at 3.16.13 AM.png" alt="Documentary" style="width:100%; max-width: 600px; height:auto; border-radius: 0%;"></a>
-        <p><b>Video Essay:</b> Knowledge Translation</p>
+        <p style="text-align: center; margin-bottom: 80px;">Follow the inspirational journey of Kevin Wang, a recent University of Waterloo graduate, in this captivating documentary. Delve into the story of his profound connection with music: from humble beginnings to remarkable progress, uncover the challenges he conquered, and explore his ambitious aspirations for the future.</p>
+        <h3><b>Video Essay:</b> Knowledge Translation</h3>
         <a href="https://youtu.be/7-rYWoeyF3Y" target="_blank"><img src="Screen Shot 2023-12-10 at 3.37.38 AM.png" alt="Video Essay" style="width:100%; max-width:600px; height:auto; border-radius: 0%;"></a>
+        <p style="text-align:center;">Explore the complex world of Big Data and its impact on our understanding of knowledge, ethics, and society. Delve into six critical concepts and their implications in this thought-provoking video essay.</p>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Leave A Message Section -->
     <section class="section" id="contact">
       <div class="section-content">
-        <h2>Leave Me A Message</h2>
-        
-        <!-- New Form -->
+        <h2>Leave Me A Message :D</h2>
         <form id="myForm">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required><br><br>
@@ -299,35 +307,24 @@
 
           <input type="submit" value="Submit">
         </form>
-
+        
+        <!-- Thank you message + clear form function -->
         <script>
-          document.getElementById('myForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            // Your logic to handle the form data here
-            // For now, let's just show a "thank you" message
-
-            // Get the form element
-            const form = document.getElementById('myForm');
-
-            // Create a thank you message element
-            const thankYouMessage = document.createElement('p');
-            thankYouMessage.textContent = 'Thank you for leaving a message!';
-
-            // Append the message after the form
-            form.insertAdjacentElement('afterend', thankYouMessage);
-
-            // Clear the form fields (optional)
+          document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const form = document.getElementById("myForm");
+            const thankYouMessage = document.createElement("p");
+            thankYouMessage.textContent = "Thank you for leaving a message!";
+            form.insertAdjacentElement("afterend", thankYouMessage);
             form.reset();
           });
         </script>
-
-        
+ 
       </div>
     </section>
-    <!-- Add more sections with image placeholders based on your plan -->
   </main>
     
+    <!-- Contact Section -->
     <footer>
       <style>
         table {
@@ -338,8 +335,8 @@
         }
 
         td {
-          padding: 5px 10px; /* Adjust the padding as needed */
-          border: 1px solid white; /* Adding border to cells */
+          padding: 5px 10px; 
+          border: 1px solid white; 
         }
       </style>
       <h2 style="color: #e6dcdd;">
@@ -350,6 +347,14 @@
         <tr>
           <td>Email:</td>
           <td><a href="mailto:j37hu@uwaterloo.ca">j37hu@uwaterloo.ca</a></td>
+          
+          <!-- mailto function -->
+          <script>
+            function openEmail() {
+              window.open('mailto:j37hu@uwaterloo.ca');
+            }
+          </script>
+          
         </tr>
         <tr>
           <td>Phone:</td>
@@ -369,22 +374,6 @@
         </tr>
       </table>
     </footer>
-
-
-
-  
-  <script>
-    function openEmail() {
-      window.open('mailto:j37hu@uwaterloo.ca');
-    }
-  </script>
-
-  <script>
-    function scrollToSection(sectionId) {
-      const section = document.getElementById(sectionId);
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  </script>
 
 </body>
 </html>
